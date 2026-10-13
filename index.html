@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f5">
+  <meta name="description" content="Satu tahun kisah cinta Jane Soraya & Faikar — 14 Oktober 2025.">
+  <title>Jane & Faikar — Our First Anniversary ♡</title>
+  <style>
+    :root{--pink:#f6b6be;--rose:#bf5b73;--rose-d:#8b3954;--wine:#602e43;--ink:#593e49;--cream:#fff9f7;--paper:#fffefd;--sub:#8b747e;--border:#f3dfe3;--shadow:0 18px 65px rgba(125,59,77,.12)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--cream);font:16px/1.7 'Trebuchet MS','Segoe UI',Arial,sans-serif;overflow-x:hidden}
+    body.dialog-open{overflow:hidden}
+    button,a{font:inherit} button{cursor:pointer} a{color:inherit}
+    .container{width:min(1130px,90%);margin-inline:auto}
+    .serif,h1,h2,h3{font-family:Georgia,'Times New Roman',serif}
+    .muted{color:var(--sub)}
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.37;z-index:-1;background:radial-gradient(circle at 10% 9%,#ffe5e6 0 15%,transparent 31%),radial-gradient(circle at 89% 50%,#fdf1e7 0 8%,transparent 38%),radial-gradient(circle at 25% 95%,#ffebed 0 8%,transparent 33%)}
+    .sparkle{position:absolute;color:#cf8b95;font-size:24px;user-select:none;pointer-events:none}
+    .topbar{height:92px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .logo{font-family:Georgia,serif;font-weight:700;font-size:25px;color:var(--wine);letter-spacing:-.4px}
+    .logo span{color:var(--rose)}
+    .nav-right{display:flex;align-items:center;gap:27px}
+    .nav-right a{text-decoration:none;font-size:13px;font-weight:700;color:#7a5c69}
+    .nav-right a:hover{color:var(--rose)}
+    .nav-pill{border:1px solid #eccdd6;color:var(--rose-d);border-radius:99px;padding:7px 15px;letter-spacing:1.5px;font-size:10px;font-weight:800;text-transform:uppercase;white-space:nowrap}
+    .hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:58px;padding:34px 0 95px;position:relative}
+    .eyebrow{color:var(--rose);font-weight:800;letter-spacing:3px;font-size:11px;text-transform:uppercase}
+    h1{font-size:clamp(58px,7vw,103px);color:var(--wine);letter-spacing:-3.5px;line-height:1.05;margin:20px 0 19px;font-weight:500}
+    h1 em{color:var(--rose);font-weight:400}
+    h1 .little{font-size:.5em;letter-spacing:-1px;white-space:nowrap}
+    .hero-copy>p{font-size:16px;line-height:1.9;max-width:490px;color:#826a75;margin:0 0 12px}
+    .story-date{display:flex;align-items:center;gap:9px;margin-top:24px;font-weight:700;font-size:12px;letter-spacing:1px;color:#926a78}
+    .story-date:before{content:'';width:25px;height:1px;background:var(--rose)}
+    .actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:29px}
+    .btn{border:0;border-radius:99px;padding:15px 23px;min-height:51px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{background:var(--rose-d);color:white;box-shadow:0 11px 25px #9a496330}
+    .btn-primary:hover{background:#722a45;box-shadow:0 16px 29px #9a49634d}
+    .btn-outline{background:#fffdfc;color:var(--rose-d);border:1px solid #efd4d9}
+    .hero-visual{height:540px;position:relative;isolation:isolate}
+    .blob{position:absolute;width:410px;height:410px;border-radius:50%;background:#ffe6e6;left:9%;top:8%;filter:blur(2px);z-index:-1}
+    .photo-main{position:absolute;width:72%;max-width:350px;left:10%;top:22px;transform:rotate(-7deg);background:white;padding:12px 12px 54px;border-radius:5px;box-shadow:0 29px 62px #6b394b36;transition:transform .25s}
+    .photo-main:hover{transform:rotate(-4deg) translateY(-6px)}
+    .photo-main img{height:376px;width:100%;object-fit:cover;object-position:center 40%;display:block;border-radius:2px}
+    .photo-main .caption{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:var(--wine);font:italic 22px Georgia,serif}
+    .photo-small{position:absolute;width:50%;max-width:242px;right:0;bottom:5px;transform:rotate(9deg);background:#fff;padding:9px 9px 37px;border-radius:4px;box-shadow:0 19px 51px #6b394b39}
+    .photo-small img{width:100%;height:200px;object-fit:cover;object-position:center;display:block;border-radius:2px}
+    .photo-small .caption{text-align:center;color:#9d6977;font:italic 14px Georgia,serif;margin-top:7px}
+    .seal{position:absolute;top:0;right:1%;width:105px;height:105px;border-radius:50%;background:#bf6379;color:white;text-align:center;display:flex;justify-content:center;align-items:center;flex-direction:column;transform:rotate(15deg);box-shadow:0 14px 32px #a84a6733;font-size:11px;line-height:1.4;letter-spacing:2px;font-weight:800;z-index:3}
+    .seal strong{font:italic 27px Georgia,serif;letter-spacing:0}
+    .hero-visual .sparkle.one{top:40%;right:5%;font-size:35px}.hero-visual .sparkle.two{bottom:20%;left:0%;font-size:25px}
+    .ticker{padding:16px 0;border-block:1px solid #f1d8dc;background:#fff2f1;overflow:hidden}
+    .ticker .inner{width:min(1150px,96%);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:17px;color:#af6879;font:italic 17px Georgia,serif;white-space:nowrap}
+    .ticker span.dot{color:#d89aa7;font-style:normal}
+    .stats{padding:89px 0 55px;text-align:center}
+    .stats .eyebrow{margin-bottom:13px}
+    .stats h2,.memories h2,.letter-section h2{color:var(--wine);font-size:clamp(36px,5.4vw,60px);font-weight:500;line-height:1.12;letter-spacing:-1.6px;margin:8px 0 15px}
+    .stats p{max-width:630px;margin:auto;color:var(--sub);font-size:15px}
+    .stat-card{margin:32px auto 0;width:min(440px,100%);border-radius:22px;border:1px solid #f4d9df;background:#fff;box-shadow:var(--shadow);padding:23px 35px 27px}
+    .stat-num{font:italic 80px/1.2 Georgia,serif;color:var(--rose-d);letter-spacing:-3px}
+    .stat-label{font-size:12px;letter-spacing:2.2px;text-transform:uppercase;font-weight:800;color:#ad7685}
+    .heart-divider{color:#d68b9b;font-size:21px;letter-spacing:8px;margin:22px auto 0}
+    .memories{padding:55px 0 92px}
+    .heading-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px}
+    .heading-row p{max-width:360px;color:var(--sub);font-size:14px;margin:0 0 8px}
+    .gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+    .memory{display:flex;flex-direction:column;grid-column:span 4;border:1px solid #f4e8e7;background:white;padding:10px 10px 19px;border-radius:16px;text-align:left;box-shadow:0 11px 38px #a4697816;transition:transform .2s,box-shadow .2s;min-width:0;color:var(--ink);cursor:zoom-in}
+    .memory:hover{transform:translateY(-7px) rotate(-.6deg);box-shadow:0 20px 45px #a469782e}
+    .memory:nth-child(4),.memory:nth-child(5){grid-column:span 6}
+    .memory .img-wrap{width:100%;height:265px;overflow:hidden;border-radius:10px;background:#f3e5e5}
+    .memory:nth-child(4) .img-wrap,.memory:nth-child(5) .img-wrap{height:295px}
+    .memory img{height:100%;width:100%;object-fit:cover;transition:transform .3s}
+    .memory:hover img{transform:scale(1.055)}
+    .memory .memory-no{font-size:10px;letter-spacing:2px;font-weight:900;color:var(--rose);margin:17px 10px 3px}
+    .memory h3{font-size:24px;color:var(--wine);font-weight:500;margin:0 10px 4px}
+    .memory p{font-size:13px;line-height:1.7;color:var(--sub);margin:0 10px 4px}
+    .letter-section{padding:18px 0 105px}
+    .letter-card{border-radius:32px;padding:60px 40px 58px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 18% 0%,#ffeced 0,transparent 50%),linear-gradient(125deg,#fffbfa,#ffedf0);border:1px solid #f1d9de;box-shadow:0 14px 50px #aa75811c}
+    .letter-card:before,.letter-card:after{content:'♡';position:absolute;color:#e8b5c0;font:100px Georgia,serif;opacity:.5;pointer-events:none}
+    .letter-card:before{left:5%;top:0;transform:rotate(-20deg)}.letter-card:after{right:5%;bottom:-45px;transform:rotate(17deg)}
+    .envelope{width:92px;height:77px;display:grid;place-items:center;margin:0 auto 18px;position:relative}
+    .envelope svg{width:82px;height:72px;filter:drop-shadow(0 10px 12px #ab667a22)}
+    .letter-card p{max-width:600px;margin:9px auto 24px;color:#8b737c;line-height:1.8}
+    .letter-card .sign{font:italic 23px Georgia,serif;color:var(--rose-d);margin:22px 0 0}
+    footer{padding:5px 0 38px;text-align:center;color:#ad8390;font-size:12px;letter-spacing:.5px}
+    footer strong{color:var(--rose-d)}
+    .modal{position:fixed;inset:0;z-index:50;background:rgba(44,24,35,.70);padding:20px;display:grid;place-items:center;backdrop-filter:blur(7px);animation:fadein .2s ease}
+    [hidden]{display:none!important}
+    @keyframes fadein{from{opacity:0}to{opacity:1}}
+    .modal-panel{max-height:min(87vh,920px);overflow-y:auto;max-width:660px;width:100%;position:relative;border-radius:22px;background:#fffdfb;box-shadow:0 30px 110px #190c163d}
+    .letter-paper{padding:52px clamp(22px,5vw,57px) 43px;text-align:center;background:repeating-linear-gradient(to bottom,transparent 0,transparent 36px,#f7edf0 37px,#f7edf0 38px)}
+    .letter-paper .top-small{font:italic 17px Georgia,serif;color:#bd788e}
+    .letter-paper h2{font:normal 45px/1.1 Georgia,serif;color:var(--wine);margin:17px 0 10px}
+    .letter-paper .subtitle{font-size:11px;letter-spacing:2.2px;font-weight:800;color:#b78492;text-transform:uppercase;margin-bottom:32px}
+    .letter-text{text-align:left;font-size:15px;line-height:2;color:#664c56}
+    .letter-text p{margin:0 0 23px}
+    .letter-text p.shout{font-family:Georgia,serif;font-size:22px;line-height:1.55;text-align:center;color:var(--rose-d);font-weight:700;margin:21px 0 27px}
+    .letter-paper .signature{text-align:right;color:var(--wine);font:italic 25px Georgia,serif;margin:30px 0 0}
+    .modal-close{position:absolute;right:15px;top:13px;z-index:2;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid #edd7db;background:#fff4f5;color:var(--wine);font:28px/1 Arial,sans-serif}
+    .modal-close:hover{background:#ffe5e9}
+    .photo-modal{grid-template-columns:minmax(0,1fr);gap:12px;text-align:center}
+    .lightbox-inner{position:relative;max-width:min(90vw,1000px);max-height:91vh;display:flex;flex-direction:column;align-items:center;gap:10px}
+    .lightbox-inner img{display:block;max-width:100%;max-height:75vh;object-fit:contain;border:7px solid #fff;border-radius:9px;box-shadow:0 24px 60px #190c164d;background:#fff}
+    .lightbox-inner .modal-close{top:9px;right:9px}
+    .lightbox-controls{display:flex;gap:13px;align-items:center;justify-content:center;color:white;font-size:13px}
+    .lightbox-controls button{background:#fffdfc;border:0;border-radius:100%;color:var(--wine);height:37px;width:37px;font-size:22px;line-height:1}
+    .float-heart{position:fixed;pointer-events:none;bottom:-50px;z-index:150;font-size:24px;animation:rise var(--duration,3.6s) ease-out forwards;text-shadow:0 2px 10px #ffcbd3a8}
+    @keyframes rise{0%{transform:translate(0,0) rotate(-15deg) scale(.8);opacity:0}10%{opacity:1}85%{opacity:1}100%{transform:translate(var(--drift,30px),-112vh) rotate(22deg) scale(1.5);opacity:0}}
+    :focus-visible{outline:3px solid #cc667f;outline-offset:4px}
+    @media(max-width:900px){.hero{gap:23px}.hero-visual{height:475px}.photo-main img{height:335px}.photo-small img{height:150px}.blob{width:340px;height:350px}.heading-row{align-items:start;flex-direction:column;gap:3px}}
+    @media(max-width:720px){.topbar{height:79px}.nav-right a{display:none}.hero{grid-template-columns:1fr;text-align:center;gap:48px;padding:36px 0 52px;min-height:0}.hero-copy>p{margin-inline:auto}.story-date,.actions{justify-content:center}.hero-visual{width:min(470px,100%);margin:auto;height:485px}.photo-main{left:9%;width:70%}.photo-small{right:2%;width:47%}.ticker .inner{font-size:13px;justify-content:center}.ticker .inner span:nth-child(n+6){display:none}.stats{padding-top:67px}.memory{grid-column:span 6}.memory:nth-child(4),.memory:nth-child(5){grid-column:span 6}.memory .img-wrap,.memory:nth-child(4) .img-wrap,.memory:nth-child(5) .img-wrap{height:250px}.letter-card{padding:53px 23px}}
+    @media(max-width:510px){.nav-pill{font-size:9px;padding:7px 9px;letter-spacing:.4px}.logo{font-size:22px}h1{font-size:clamp(49px,12.4vw,70px);letter-spacing:-2.6px}.hero-visual{height:390px}.photo-main{left:4%;top:14px;width:70%;padding:8px 8px 41px}.photo-main img{height:287px}.photo-main .caption{font-size:18px;bottom:11px}.photo-small{width:49%;right:0;bottom:1px;padding:7px 7px 28px}.photo-small img{height:130px}.photo-small .caption{font-size:11px;margin-top:4px}.seal{height:80px;width:80px;font-size:9px}.seal strong{font-size:22px}.blob{width:270px;height:290px}.gallery{gap:14px}.memory,.memory:nth-child(4),.memory:nth-child(5){grid-column:span 12}.memory .img-wrap,.memory:nth-child(4) .img-wrap,.memory:nth-child(5) .img-wrap{height:300px}.stats h2,.memories h2,.letter-section h2{font-size:39px}.letter-paper h2{font-size:34px}.letter-text{font-size:14px}.letter-text p.shout{font-size:20px}.letter-paper{padding-top:49px}.letter-card:before,.letter-card:after{font-size:70px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar container">
+    <div class="logo">J <span>♡</span> F</div>
+    <nav class="nav-right" aria-label="Menu">
+      <a href="#kenangan">Our memories</a>
+      <a href="#surat">Love letter</a>
+      <span class="nav-pill">14 OCTOBER 2025 ♡</span>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">A little love story, just for you ♡</div>
+        <h1 id="hero-title">Happy <em>1st</em><br><span class="little">Anniversary,</span><br>Jane! <em>♡</em></h1>
+        <p>To my favorite person, <strong>Jane Soraya</strong>. Satu tahun berlalu, dan dari semua hal baik yang terjadi, bisa menjalani semuanya sama kamu tetap jadi yang paling aku syukuri.</p>
+        <div class="story-date">14 Oktober 2025 <span aria-hidden="true">♡</span> Selamanya</div>
+        <div class="actions">
+          <button class="btn btn-primary" type="button" data-open-letter>💌 Buka surat dari Faikar</button>
+          <a class="btn btn-outline" href="#kenangan">Lihat foto kita ↗</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Foto kenangan Jane dan Faikar">
+        <div class="blob" aria-hidden="true"></div>
+        <div class="photo-main"><img src="foto1.jpg" alt="Jane dan Faikar berfoto bersama di depan cermin" loading="eager"><div class="caption">you & me, always ♡</div></div>
+        <div class="photo-small"><img src="foto5.jpg" alt="Jane dan Faikar menikmati momen berdua" loading="eager"><div class="caption">my favorite us ♡</div></div>
+        <div class="seal">OUR<strong>ONE</strong>YEAR ♡</div>
+        <span class="sparkle one" aria-hidden="true">✧</span><span class="sparkle two" aria-hidden="true">✦</span>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div class="inner"><span>Forever my favorite person</span><span class="dot">♡</span><span>365 days of us</span><span class="dot">♡</span><span>More memories to come</span><span class="dot">♡</span><span>Forever & always</span></div></div>
+    <section class="stats container" aria-labelledby="stats-title">
+      <div class="eyebrow">The best chapter of my life</div>
+      <h2 id="stats-title">Satu tahun, sejuta cerita.</h2>
+      <p>Terima kasih udah jadi rumah, teman cerita, tempat pulang, dan alasan di balik banyak senyumku. Kita udah sampai sejauh ini, sayang. ♡</p>
+      <div class="stat-card"><div class="stat-num" id="days-together">365</div><div class="stat-label">hari sejak kita jadian ♡</div><div class="muted" style="font:italic 15px Georgia,serif;margin-top:7px">and still counting...</div></div>
+      <div class="heart-divider" aria-hidden="true">♡ ♡ ♡</div>
+    </section>
+    <section class="memories container" id="kenangan" aria-labelledby="memories-title">
+      <div class="heading-row"><div><div class="eyebrow">Our little photo diary</div><h2 id="memories-title">Every picture tells <em style="color:var(--rose);font-weight:400">our story.</em></h2></div><p>Beberapa momen yang tersimpan di kamera, tapi semua rasanya tetap tersimpan di hati. Klik foto untuk melihat lebih dekat. ♡</p></div>
+      <div class="gallery">
+        <button class="memory" type="button" data-gallery="0" aria-label="Lihat foto 1, Kita"><div class="img-wrap"><img src="foto1.jpg" alt="Jane dan Faikar berfoto di depan cermin" loading="eager"></div><div class="memory-no">01 / 05</div><h3>Kita ♡</h3><p>Dua orang, satu cerita. Semoga selalu begini, ya.</p></button>
+        <button class="memory" type="button" data-gallery="1" aria-label="Lihat foto 2, Proud of you"><div class="img-wrap"><img src="foto2.jpg" alt="Jane berpose di depan School of Metallurgy" loading="eager"></div><div class="memory-no">02 / 05</div><h3>Proud of you</h3><p>Aku selalu bangga sama setiap langkah kamu, sayang.</p></button>
+        <button class="memory" type="button" data-gallery="2" aria-label="Lihat foto 3, Petualanganmu"><div class="img-wrap"><img src="foto3.jpg" alt="Jane berpose dengan pemandangan pegunungan" loading="eager"></div><div class="memory-no">03 / 05</div><h3>Little adventures</h3><p>Masih banyak tempat dan hari baru yang mau kita lewatin.</p></button>
+        <button class="memory" type="button" data-gallery="3" aria-label="Lihat foto 4, Senyummu"><div class="img-wrap"><img src="foto4.jpg" alt="Jane tersenyum dengan latar dinding batu" loading="eager"></div><div class="memory-no">04 / 05</div><h3>Your smile</h3><p>Senyum yang nggak pernah gagal bikin hariku lebih hangat.</p></button>
+        <button class="memory" type="button" data-gallery="4" aria-label="Lihat foto 5, Momen berdua"><div class="img-wrap"><img src="foto5.jpg" alt="Jane dan Faikar duduk berdua di restoran" loading="eager"></div><div class="memory-no">05 / 05</div><h3>My favorite us</h3><p>Di momen kecil maupun besar, favoritku tetap kamu.</p></button>
+      </div>
+    </section>
+    <section class="letter-section container" id="surat" aria-labelledby="letter-title">
+      <div class="letter-card">
+        <div class="envelope" aria-hidden="true"><svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="17" width="88" height="58" rx="6" fill="#FAE3E6" stroke="#C5798E" stroke-width="2"/><path d="M7 23L47 53C49 55 51 55 53 53L93 23" stroke="#C5798E" stroke-width="2.4"/><path d="M7 72L34 48M93 72L66 48" stroke="#C5798E" stroke-width="2"/><path d="M50 30C37 19 41 8 50 13C59 8 63 19 50 30Z" fill="#BD5C77"/></svg></div>
+        <div class="eyebrow">From Faikar, with all my heart</div>
+        <h2 id="letter-title">I wrote you <em style="color:var(--rose);font-weight:400">a little letter.</em></h2>
+        <p>Ada banyak hal yang pengin aku bilang, dan satu tahun ini nggak akan cukup buat ngejelasin betapa berharganya kamu buat aku.</p>
+        <button class="btn btn-primary" type="button" data-open-letter>💌 Buka surat cintanya</button>
+        <div class="sign">I love you, Jane ♡</div>
+      </div>
+    </section>
+  </main>
+  <footer class="container">Made with <span style="color:#c85b78">♥</span> by <strong>Faikar</strong>, only for <strong>Jane Soraya</strong> · 14.10.2026</footer>
+  <div id="letter-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letter-modal-title" hidden>
+    <div class="modal-panel" id="letter-panel">
+      <button class="modal-close" type="button" aria-label="Tutup surat" data-close>×</button>
+      <div class="letter-paper">
+        <div class="top-small">A letter to the love of my life ♡</div>
+        <h2 id="letter-modal-title">Dear Jane Soraya,</h2>
+        <div class="subtitle">14 october 2026 · one year with you</div>
+        <div class="letter-text">
+          <p>Hiii, sayaang! ❤️</p>
+          <p>Karena di sini udah jam 12, jadi aku mau ngucapin...</p>
+          <p class="shout">HAPPYYY OUR FIRST YEAR ANNIV, SAYAAANG! YAAAY! ❤️</p>
+          <p>I'm very, very happy we can make it and face all of it together for the past year. I'm very, very happy that I can always be with you.</p>
+          <p>Makasihh yaa, sayang, udah nemenin aku selama ini. Kita selama ini udah berjuang barengg, dan kita udah berkembang jadi orang yang lebih baikkk.</p>
+          <p>Akuu sayang banget sama kamu, dan aku akan selalu sayang sama kamu. Kitaa akan selalu dan selamanya bersama, yaa sayang. ❤️</p>
+          <p>Maaf yaa kalau selama setahun ini aku masih banyak kurangnya buat kamu. Aku masih banyak bikin salah sama kamu, dan masih ada hal-hal negatif dari aku juga yang perlu aku perbaiki.</p>
+          <p>Kamu akan selalu menjadi orang yang sangat-sangat aku butuhin dan yang pentinggg banget buat aku, sayaang.</p>
+          <p>I love you always, and I very, very, very much love you, cintaku, sayangku! ❤️❤️❤️❤️❤️❤️❤️❤️❤️</p>
+        </div>
+        <div class="signature">Forever yours,<br><strong>Faikar ♡</strong></div>
+      </div>
+    </div>
+  </div>
+  <div id="photo-modal" class="modal photo-modal" role="dialog" aria-modal="true" aria-label="Foto kenangan" hidden>
+    <div class="lightbox-inner"><button class="modal-close" type="button" aria-label="Tutup foto" data-close>×</button><img id="large-photo" src="foto1.jpg" alt="Foto kenangan"><div class="lightbox-controls"><button id="photo-prev" type="button" aria-label="Foto sebelumnya">‹</button><span id="photo-counter">1 / 5</span><button id="photo-next" type="button" aria-label="Foto selanjutnya">›</button></div></div>
+  </div>
+  <script>
+    (() => {
+      'use strict';
+      const PHOTO_SOURCES = ['foto1.jpg','foto2.jpg','foto3.jpg','foto4.jpg','foto5.jpg'];
+      const PHOTO_ALTS = [
+        'Jane dan Faikar berfoto di depan cermin',
+        'Jane di depan School of Metallurgy',
+        'Jane dengan latar pemandangan pegunungan',
+        'Jane tersenyum dengan latar dinding batu',
+        'Jane dan Faikar sedang duduk bersama'
+      ];
+      const $ = id => document.getElementById(id);
+      const letterModal = $('letter-modal');
+      const photoModal = $('photo-modal');
+      let currentPhoto = 0;
+      let returnFocus = null;
+      function updateDays(){
+        const today = new Date();
+        const start = Date.UTC(2025,9,14);
+        const now = Date.UTC(today.getFullYear(),today.getMonth(),today.getDate());
+        const days = Math.max(0,Math.round((now-start)/86400000));
+        $('days-together').textContent = new Intl.NumberFormat('id-ID').format(days);
+      }
+      updateDays();
+      function showModal(modal){
+        returnFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add('dialog-open');
+        modal.querySelector('button').focus();
+      }
+      function closeModals(){
+        if(letterModal.hidden && photoModal.hidden)return;
+        letterModal.hidden = true;
+        photoModal.hidden = true;
+        document.body.classList.remove('dialog-open');
+        if(returnFocus && typeof returnFocus.focus === 'function')returnFocus.focus();
+      }
+      function burstHearts(n=20){
+        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+        const hearts = ['♡','♥','💗','💕','💖'];
+        for(let i=0;i<n;i++){
+          const el = document.createElement('span');
+          el.className='float-heart';
+          el.textContent=hearts[i%hearts.length];
+          el.style.left=(5+Math.random()*90)+'%';
+          el.style.setProperty('--drift',((Math.random()-.5)*240)+'px');
+          el.style.setProperty('--duration',(3+Math.random()*2)+'s');
+          el.style.animationDelay=(Math.random()*.8)+'s';
+          document.body.appendChild(el);
+          window.setTimeout(()=>el.remove(),6000);
+        }
+      }
+      document.querySelectorAll('[data-open-letter]').forEach(button => button.addEventListener('click',()=>{showModal(letterModal);burstHearts(15)}));
+      function renderPhoto(){
+        $('large-photo').src = PHOTO_SOURCES[currentPhoto];
+        $('large-photo').alt = PHOTO_ALTS[currentPhoto];
+        $('photo-counter').textContent = (currentPhoto+1) + ' / ' + PHOTO_SOURCES.length;
+      }
+      document.querySelectorAll('[data-gallery]').forEach(button => button.addEventListener('click',()=>{
+        currentPhoto=Number(button.dataset.gallery);renderPhoto();showModal(photoModal);
+      }));
+      function stepPhoto(delta){currentPhoto=(currentPhoto+delta+PHOTO_SOURCES.length)%PHOTO_SOURCES.length;renderPhoto()}
+      $('photo-prev').addEventListener('click',()=>stepPhoto(-1));
+      $('photo-next').addEventListener('click',()=>stepPhoto(1));
+      document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeModals));
+      [letterModal,photoModal].forEach(modal=>modal.addEventListener('click',event=>{if(event.target===modal)closeModals()}));
+      document.addEventListener('keydown',event=>{
+        if(event.key==='Escape')closeModals();
+        if(!photoModal.hidden && event.key==='ArrowRight')stepPhoto(1);
+        if(!photoModal.hidden && event.key==='ArrowLeft')stepPhoto(-1);
+      });
+    })();
+  </script>
+</body>
+</html>
